@@ -1,0 +1,309 @@
+body{
+    margin: 0;
+    padding: 0;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: AtlasGrotesk,sans-serif;
+}
+.sidebar{
+    width: 250px;
+    height: 100vh;
+    background: #f7f9fa;
+    overflow: hidden;
+    position: absolute;
+}
+.main{
+    position: absolute;
+    left: 250px;
+    width: calc(100% - 300px);
+}
+.upgrade{
+    width: 100%;
+    text-align: right;
+    margin-top: 12px;
+}
+.upgrade a{
+    text-decoration: none;
+}
+.upa{
+    margin-left: 5px;
+    margin-right: 10px;
+    
+}
+.head-nav{
+    list-style-type: none;
+}
+.head-item{
+    display: inline-block;
+    padding: 10px;
+}
+.right{
+    float: right;
+}
+.min{
+    display: none;
+}
+.searchbox{
+    outline: none;
+    border: none;
+}
+.search{
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+.noti{
+    display: inline-block;
+    padding: 10px;
+}
+.noti i{
+    font-size: 20px;
+}
+.noti i:hover{
+    font-size: 20px;
+    color: #0062ff;
+}
+.mb-search{
+    display: none;
+}
+.db-logo{
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 15%;
+    margin-top: 30%;
+    font-size: 50px;
+    color: #0062ff;
+}
+.files{
+    margin-left: 15%;
+    margin-top: 10%;
+    color: #0062ff;
+    font-size: 18px;
+}
+.side-list{
+    list-style-type: none;
+}
+.side-list-item{
+    padding-top: 20px;
+}
+.side-list-item a {
+    text-decoration: none;
+    color: #555;
+}
+.side-list-item a:hover{
+    color: #0062ff;
+}
+.side-list-item a.active{
+    color: #0062ff;
+    font-weight: 600;
+}
+.files-container{
+    width: 65%;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+.file-table{
+    border-collapse: collapse;
+    width: 100%;
+    color: #333
+}
+.file-table tbody{
+    width: 100%;
+}
+.spc{
+    font-weight: 100;
+    font-size: 10px;
+}
+.pdf-icon{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+.filename{
+    display: inline-block;
+    height: 25px;
+}
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  tr:hover{
+      background: #eee;
+  }
+  .th{
+      font-weight: 600;
+  }
+  .dpanel{
+      position: absolute;
+      right: 50px;
+      top: 20%;
+      z-index: 10;
+  }
+  .fdetails{
+      width: 350px;
+      height: 200px;
+      background: #f3f4f5;
+      color: #737475;
+      border-radius: 10px;
+      text-align: center;
+  }
+  .moredetails{
+      line-height: 170px;
+  }
+  .panel-list{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+  .panel-item{
+     padding: 10px; 
+  }
+  .panel-item a{
+      text-decoration: none;
+      color: #0062ff;
+  }
+  .panel-item a i{
+      color: #0070e0;
+      font-size: 20px;
+  }
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 20; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .mlogo{
+      text-align: center;
+  }
+  .mlogo img{
+      width: 150px;
+  }
+  .instruction{
+      font-size: 12px;
+      color: #888;
+  }
+  .inst{
+      font-weight: 700;
+      text-align: center;
+  }
+  .ebox{
+      margin-top: 30px;
+      text-align: center;
+  }
+  .e-text{
+      font-weight: 600;
+      color: #0070e0;
+  }
+  .password{
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .password:focus{
+      outline: none;
+      border: 1px solid #0062ff;
+  }
+ 
+  .submit{
+      padding: 10px;
+      width: 200px;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      background: #0070e0;
+      cursor: pointer;
+  }
+  .submitdiv{
+      margin-bottom: 20px;
+  }
+  .foot{
+      margin: 0;
+      padding: 0;
+      color: #888;
+  }
+  .mcontent{
+      display: block;
+  }
+  .mspinner{
+      display: none;
+      width: 100%;
+      text-align: center;
+  }
+  .mspinner img{
+      width: 100%;
+  }
+  .checking{
+      font-style: italic;
+      color: #888;
+  }
+  .error{
+      color: red;
+      font-size: 13px;
+      text-align: center;
+      display: none;
+  }
+@media only screen and (max-width: 680px) {
+    .sidebar {
+      display: none;
+    }
+    .main{
+        left: 0;
+        width: 100%;
+    }
+    .min{
+        display: inline-block;
+    }
+    .mb-search{
+        display: inline-block;
+    }
+    .search{
+        display: none;
+    }
+    .dpanel{
+        display: none;
+    }
+    .modal-content{
+        width: 90%
+    }
+  }

